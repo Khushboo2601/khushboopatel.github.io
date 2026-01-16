@@ -1,87 +1,159 @@
-# 👩‍💻 Khushboo Patel — Cyber Security & Data‑Driven IT Professional
+Khushboo Patel
+Cyber Security • Data Analyst • IT Governance
 
-![Profile Banner](Khushboo.png)
+Cyber Security & IT professional specialising in risk-driven data analytics, IT/OT governance, and compliance automation within regulated environments.
 
-Welcome to my professional GitHub resume repository.  
-This space represents my work, certifications, and professional journey in **Cyber Security, Data Analytics, and IT Governance**.
+👤 Profile Summary
 
----
+Cyber Security and IT professional with a solid foundation in cyber risk management, governance, compliance, and data-driven operations, supported by postgraduate studies in Information and Communication Technology (ICT) 
 
-## 📸 Image Customization
-You can replace or edit these images anytime:
-- `images/banner.png` → Top cyber‑themed banner
-- `images/profile.png` → Your profile photo
-- `images/dashboard.png` → Power BI or project screenshots
 
----
+.
 
-## 📄 Contents
-| File | Description |
-|------|-------------|
-| `Khushboo Patel Resume 2025.docx` | My full professional CV |
-| `README.md` | GitHub‑formatted professional overview |
+Experienced in designing and implementing organisation-wide Cyber Security Policies at NVMS, strengthening IT/OT governance, improving system integrity, and reducing operational risks. Skilled in conducting cyber and operational risk assessments, process optimisation, and automation using Python, SQL, and Power BI.
 
----
+Bringing several years of experience in calibration, laboratory operations, and technical service delivery, with a strong background in data management systems, equipment workflows, quality control, and regulatory compliance. Adept at integrating calibration processes with digital systems, enhancing accuracy, traceability, and reporting efficiency. Known for bridging the gap between technical teams, business needs, and cybersecurity requirements, translating complex concepts into clear, actionable strategies. Highly motivated to continue advancing in cybersecurity and IT, leveraging a strong blend of hands-on technical experience and operational expertise. 
 
-## 🎯 Professional Profile
-Cyber Security and IT professional with a strong foundation in **governance, risk & compliance, secure systems, automation, and analytics**.  
-Currently working in a regulated **NATA laboratory & IT/OT environment**, where I design cybersecurity policies, automate compliance reporting, and build security dashboards.
 
----
+🧠 Key Skills
 
-## 🎓 Education
-- **Master of Information and Communication Technology (ICT)** – Cyber Security & Data Analysis  
-  University of the Sunshine Coast (2025)
-- **Diploma of Information Technology (Back‑End Development)**  
-  Equinim College (2025)
-- **Master of Science – Biotechnology**
-- **Bachelor of Science – Biotechnology**
+Cyber & Governance
 
----
+Cyber Risk Management (ISO 27001, NIST, COBIT, ISA/IEC)
 
-## 🛡️ Certifications
-- Microsoft Security, Compliance & Identity Fundamentals  
-- Microsoft Azure Data Fundamentals  
-- Microsoft Azure AI Fundamentals  
-- IT Specialist – Python  
-- NATA – Quality Management in Laboratory  
-- Excel Advanced – Power BI, VBA  
+IT & OT Security
 
----
+Vulnerability Assessment
 
-## 🧠 Core Skills
-| Cyber Security | Data & Automation | Operations |
-|----------------|------------------|-------------|
-| GRC & Policy | Python | SAP Systems |
-| IT/OT Security | SQL | Calibration Systems |
-| Risk Assessments | Power BI | Quality Control |
-| Compliance Audits | Dashboards | NATA Governance |
+Policy Development
 
----
+Risk Advisory & Audit Preparation
 
-## 🧪 Experience Highlights
+Data & Technology
 
-### NVMS – Calibration Technician (Current)
-- Designed and implemented company‑wide **Cyber Security Policy**
-- Built **Power BI security & performance dashboards**
-- Developed **Python automation** for audit & compliance reporting
-- Conducted cyber & operational **risk assessments**
-- Managed **SAP‑based inventory, invoicing & traceability**
+Python
 
-### Materials Technology Centre – Team Leader
-- Led NATA‑accredited laboratory testing
-- Built **database‑driven QA systems**
-- Managed **NCRs & compliance reporting**
-- Performed **trend analysis & continuous improvement**
+SQL
 
----
+HTML / JavaScript
 
-## 📬 Contact
-📧 **p.kh2601@gmail.com**  
-📱 **0415 225 295**  
-🔗 **LinkedIn:** www.linkedin.com/in/khushboo-patel-1959a812a  
+Power BI Dashboards
 
----
+Microsoft 365 & SharePoint
 
-## 🚀 Career Focus
-Cyber Security Analyst • GRC Analyst • OT Security • Data & Security Analytics • Compliance & Risk
+Professional & Leadership
+
+Strong Stakeholder Communication
+
+Leadership in Technical Environments
+
+Team Coordination
+
+Quality & Compliance Management
+
+
+🎓 Education
+
+Master of Information and Communication Technology (ICT)
+University of the Sunshine Coast — Expected 2025
+Major: Cyber Security & Data Analysis
+Key Subjects: Penetration Testing, Cyber Security Principles, Risk Management, Cloud Security, Data Analytics, Machine Learning, IT Governance
+Projects:
+
+Energy Consumption Prediction (ML-based risk modelling)
+
+MongoDB schema for Smart Learning Platform
+
+AI Symposium research on emotionally intelligent AI risks
+
+Diploma of Information Technology (Back-End Development)
+Equinim College, 2025
+
+Master of Science – Biotechnology
+Bachelor of Science – Biotechnology
+
+Khushboo_Patel_Resume
+
+💼 Professional Experience
+Calibration Technician – NVMS
+
+West Leederville, WA | Current
+
+Designed and implemented NVMS’s Cyber Security Policy, governing IT/OT systems and mitigating cyber risks
+
+Conducted cyber and operational risk assessments, identifying vulnerabilities across laboratory and IT environments
+
+Developed Python-based automation tools for compliance reporting, improving accuracy and audit readiness
+
+Built Power BI dashboards to monitor calibration performance, cybersecurity vulnerabilities, and system integrity
+
+Integrated data management systems to streamline calibration workflows and ensure traceability
+
+Collaborated with engineers and management to embed cybersecurity best practices
+
+Performed calibration and maintenance of noise meters in line with regulatory standards
+
+Managed SAP-based inventory, quoting, booking, invoicing, and reporting
+
+Implemented process improvements to enhance accuracy and efficiency
+
+Managed laboratory scheduling, equipment maintenance, workflow coordination, and quality control
+
+Maintained full regulatory and quality documentation
+
+Provided technical support and training
+
+
+Team Leader – Materials Technology Centre (MTC)
+
+Hazelmere, WA | Sep 2021 – Dec 2023
+
+Coordinated materials testing (cement physical & chemical) under Australian Standards & NATA
+
+Ensured compliance with Quality Manual, ITPs, and accreditation requirements
+
+Reviewed test data, issued reports, and maintained statistical databases
+
+Managed product specification changes and NCRs
+
+Delivered trend reporting and quality improvement recommendations
+
+Participated in R&D and design activities
+
+Managed customer complaints and resolutions
+
+Provided technical advice to Technical Managers and Sales Teams
+
+Maintained hazard awareness and workplace safety
+
+Assisted in business, NATA, and safety audits
+
+
+Laboratory Technician – Midland Brick
+
+South Guildford, WA | Jan 2020 – Sep 2021
+
+Conducted compliance testing for environmental and operational risks
+
+Managed instrumentation data and reporting systems
+
+Developed secure digital record systems for testing and compliance
+
+
+📜 Certifications
+
+Microsoft Certified: Security, Compliance & Identity Fundamentals
+
+IT Specialist – Python
+
+NATA – Quality Management in Laboratory
+
+Excel Advanced – Power BI, VBA
+
+📬 Contact
+
+📍 Aveley, WA 6069
+📧 p.kh2601@gmail.com
+
+📱 +61 415 225 295
+🔗 LinkedIn: www.linkedin.com/in/khushboo-patel-1959a812a
