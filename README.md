@@ -1,6 +1,6 @@
 # 👩‍💻 Khushboo Patel — Cyber Security & Data‑Driven IT Professional
 
-![Profile Banner](images/banner.png)
+![Profile Banner](images/Khushboo.png)
 
 Welcome to my professional GitHub resume repository.  
 This space represents my work, certifications, and professional journey in **Cyber Security, Data Analytics, and IT Governance**.
