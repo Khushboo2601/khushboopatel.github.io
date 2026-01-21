@@ -205,6 +205,24 @@
         </div>
     </div>
 
+        <div class="card project-db">
+    <div class="card-header">
+      <h3>Smart Learning Platform – MongoDB</h3>
+      <span>NoSQL • Data Architecture</span>
+    </div>
+    <div class="card-content">
+      <p>
+        Designed a scalable MongoDB schema for a smart, connected learning ecosystem
+        supporting subscriptions, downloadable content, analytics, and usage tracking.
+      </p>
+      <p>
+        Emphasis was placed on data integrity, performance, and governance,
+        ensuring the platform could scale securely while maintaining visibility
+        into user behaviour and operational metrics.
+      </p>
+    </div>
+  </div>
+    
     <div class="card">
         <div class="card-header">
             <h3>Smart Learning Platform – MongoDB</h3>
@@ -290,34 +308,43 @@
     </div>
 </section>
 
-<section id="education" class="fade-in">
-    <h2 class="section-title">Education</h2>
-    <div class="skills-grid">
-        <div class="skill-box"><strong>Master of ICT</strong> – USW (Expected 2025)</div>
-        <div class="skill-box"><strong>Diploma of IT</strong> – Equinim College</div>
-        <div class="skill-box"><strong>BSc & MSc</strong> – Biotechnology</div>
-    </div>
+<section id="education" class="fade-up">
+  <h2>Education</h2>
+  <p><strong>Master of ICT</strong> – University of the Sunshine Coast (Expected 2025)</p>
+  <p>Major: Cyber Security & Data Analysis</p>
+  <p><strong>Diploma of Information Technology</strong> – Equinim College</p>
+  <p><strong>Bachelor & Master of Science</strong> – Biotechnology</p>
+</section>
+
+<section id="contact" class="fade-up">
+  <h2>Contact</h2>
+  <p>📍 Aveley, WA 6069</p>
+  <p>📧 p.kh2601@gmail.com</p>
+  <p>📱 +61 415 225 295</p>
+  <p>🔗 LinkedIn: linkedin.com/in/khushboo-patel-1959a812a</p>
 </section>
 
 <footer>
-    <p>© 2026 Khushboo Patel — Cyber Security & Data Analytics Portfolio</p>
-    <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.6;">Aveley, WA 6069 | p.kh2601@gmail.com</p>
+  © 2026 Khushboo Patel — Cyber Security & Data Analytics Portfolio
 </footer>
 
 <script>
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(e => { if(e.isIntersecting) e.target.classList.add("visible") });
-    }, { threshold: 0.1 });
-    document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+<footer>
+  © 2026 Khushboo Patel — Cyber Security & Data Analytics Portfolio
+</footer>
 
-    document.querySelectorAll(".card").forEach(card => {
-        card.addEventListener("click", () => {
-            card.classList.toggle("active");
-            const icon = card.querySelector(".fa-chevron-down");
-            if(icon) icon.style.transform = card.classList.contains("active") ? "rotate(180deg)" : "rotate(0deg)";
-        });
-    });
+<script>
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("show")});
+},{threshold:0.2});
+document.querySelectorAll(".fade-up").forEach(el=>observer.observe(el));
+
+document.querySelectorAll(".card").forEach(card=>{
+  card.addEventListener("click",()=>card.classList.toggle("active"));
+});
 </script>
 
+</body>
+</html>
 </body>
 </html>
