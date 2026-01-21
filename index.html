@@ -1,312 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Khushboo Patel | Cyber Security & Data Analyst</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khushboo Patel | Portfolio</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-light: #f8fafc;
+            --text-light: #1e293b;
+            --card-light: #ffffff;
+            --bg-dark: #0f172a;
+            --text-dark: #f1f5f9;
+            --card-dark: #1e293b;
+            --transition: all 0.3s ease;
+        }
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            background-color: var(--bg-light);
+            color: var(--text-light);
+            line-height: 1.6;
+            transition: var(--transition);
+        }
 
-body{
-  font-family:'Poppins',sans-serif;
-  background:#f6f7fb;
-  color:#2d2d2d;
-  line-height:1.9;
-}
+        body.dark-mode {
+            background-color: var(--bg-dark);
+            color: var(--text-dark);
+        }
 
-section{
-  padding:90px 25px;
-  max-width:1200px;
-  margin:auto;
-}
+        /* NAVIGATION */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            z-index: 1000;
+            gap: 20px;
+        }
 
-h2{
-  font-size:2.2em;
-  margin-bottom:35px;
-  color:#24324a;
-}
+        .dark-mode nav { background: rgba(15, 23, 42, 0.8); }
 
-/* HEADER */
-header{
-  background:linear-gradient(135deg,#A8E6CF,#DCCEF9);
-  padding:140px 25px;
-  text-align:center;
-}
-header h1{font-size:3.5em}
-header p{font-size:1.3em;margin-top:10px}
+        nav a {
+            text-decoration: none;
+            color: inherit;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
 
-/* NAV */
-nav{
-  position:sticky;
-  top:0;
-  background:white;
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  padding:18px;
-  box-shadow:0 8px 30px rgba(0,0,0,0.08);
-  z-index:100;
-}
-nav a{font-weight:600;color:#444}
+        nav a:hover { color: var(--primary); }
 
-/* BUTTON */
-.resume-btn{
-  display:inline-block;
-  background:#FFD6C9;
-  padding:14px 26px;
-  border-radius:35px;
-  margin-top:30px;
-  font-weight:600;
-}
+        /* THEME TOGGLE */
+        #theme-toggle {
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            background: transparent;
+            color: inherit;
+        }
 
-/* FADE */
-.fade-up{opacity:0;transform:translateY(30px);transition:0.8s}
-.fade-up.show{opacity:1;transform:none}
+        /* HERO SECTION */
+        header {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            color: white;
+        }
 
-/* SKILLS */
-.skills{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:25px;
-}
-.skill-box{
-  background:#ffffff;
-  padding:30px;
-  border-radius:20px;
-  box-shadow:0 12px 40px rgba(0,0,0,0.1);
-}
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid rgba(255,255,255,0.2);
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
 
-/* EXPANDABLE CARDS */
-.card{
-  background:white;
-  padding:35px;
-  border-radius:24px;
-  margin-bottom:30px;
-  box-shadow:0 18px 45px rgba(0,0,0,0.12);
-  cursor:pointer;
-}
-.card-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-.card-header h3{font-size:1.4em}
-.card-header span{color:#666;font-size:0.95em}
-.card-content{
-  margin-top:25px;
-  display:none;
-}
-.card.active .card-content{display:block}
+        header h1 { font-size: 3rem; margin: 0; }
+        header p { font-size: 1.2rem; opacity: 0.9; }
 
-/* PROJECT COLOR TAGS */
-.project-energy{border-left:10px solid #A8E6CF}
-.project-ai{border-left:10px solid #FFD6C9}
-.project-db{border-left:10px solid #DCCEF9}
+        /* SECTIONS */
+        section {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
 
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:35px;
-  background:#eceef5;
-}
-</style>
+        h2 {
+            border-left: 5px solid var(--primary);
+            padding-left: 15px;
+            margin-bottom: 30px;
+        }
+
+        /* GRID LAYOUTS */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-item {
+            background: var(--card-light);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+
+        .dark-mode .skill-item { background: var(--card-dark); }
+
+        .skill-item:hover { transform: translateY(-5px); color: var(--primary); }
+
+        /* CARDS */
+        .card {
+            background: var(--card-light);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+            cursor: pointer;
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .dark-mode .card { background: var(--card-dark); }
+
+        .card:hover { border-color: var(--primary); }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .card.active .card-content {
+            max-height: 1000px;
+            margin-top: 20px;
+        }
+
+        .project-img {
+            width: 100%;
+            height: 200px;
+            background: #e2e8f0;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            object-fit: cover;
+        }
+
+        /* BUTTONS */
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* ANIMATIONS */
+        .fade-in { opacity: 0; transform: translateY(20px); transition: 0.6s all ease-out; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    </style>
 </head>
-
 <body>
 
-<header>
-  <h1>Khushboo Patel</h1>
-  <p>Cyber Security • Data Analyst • IT Governance</p>
-</header>
-
 <nav>
-  <a href="#about">About</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
-  <a href="#experience">Experience</a>
-  <a href="#education">Education</a>
-  <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <button id="theme-toggle"><i class="fas fa-moon"></i></button>
 </nav>
 
-<section id="about" class="fade-up">
-  <h2>Profile Summary</h2>
-  <p>
-  Cyber Security and IT professional with a solid foundation in cyber risk management, governance, compliance, and data-driven operations, supported by postgraduate studies in Information and Communication Technology (ICT) 
-  Experienced in designing and implementing organisation-wide Cyber Security Policies at NVMS, strengthening IT/OT governance, improving system integrity, and reducing operational risks. 
-  Skilled in conducting cyber and operational risk assessments, process optimisation, and automation using Python, SQL, and Power BI.
-  </p>
-  <p>
-    Bringing several years of experience in calibration, laboratory operations, and technical service delivery, with a strong background in data management systems, equipment workflows, quality control, and regulatory compliance. 
-    Adept at integrating calibration processes with digital systems, enhancing accuracy, traceability, and reporting efficiency. Known for bridging the gap between technical teams, business needs, and cybersecurity requirements, translating complex concepts into clear, actionable strategies. 
-    Highly motivated to continue advancing in cybersecurity and IT, leveraging a strong blend of hands-on technical experience and operational expertise.
-  </p>
+<header>
+    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400" alt="Khushboo Patel" class="profile-img">
+    <h1>Khushboo Patel</h1>
+    <p><i class="fas fa-shield-halved"></i> Cyber Security • <i class="fas fa-chart-line"></i> Data Analyst • <i class="fas fa-server"></i> IT Governance</p>
+    <a href="Khushboo_Patel_Resume.pdf" class="btn" download><i class="fas fa-file-download"></i> Download Resume</a>
+</header>
 
-  <a href="Khushboo_Patel_Resume.pdf" class="resume-btn" download>
-    📄 Download Resume
-  </a>
+<section id="about" class="fade-in">
+    <h2>Profile Summary</h2>
+    <p>Cyber Security and IT professional with a solid foundation in cyber risk management, governance, and data-driven operations. Experienced in implementing <strong>ISO 27001</strong> and <strong>NIST</strong> frameworks to strengthen IT/OT governance.</p>
+    <p>Skilled in Python-based automation and SQL for process optimization, bridging the gap between technical teams and business strategy.</p>
 </section>
 
-<section id="skills" class="fade-up">
-  <h2>Key Skills</h2>
-  <div class="skills">
-    <div class="skill-box">Cyber Risk Management (ISO 27001, NIST, COBIT, ISA/IEC)</div>
-    <div class="skill-box">IT & OT Security & Governance</div>
-    <div class="skill-box">Python, SQL, Power BI, Automation</div>
-    <div class="skill-box">Policy Development & Audit Readiness</div>
-    <div class="skill-box">Stakeholder Communication & Leadership</div>
-    <div class="skill-box">Quality & Regulatory Compliance</div>
-  </div>
+<section id="skills" class="fade-in">
+    <h2>Core Expertise</h2>
+    <div class="skills-grid">
+        <div class="skill-item"><i class="fas fa-user-shield"></i><br>Risk Management</div>
+        <div class="skill-item"><i class="fas fa-code"></i><br>Python & SQL</div>
+        <div class="skill-item"><i class="fas fa-database"></i><br>Data Analysis</div>
+        <div class="skill-item"><i class="fas fa-file-contract"></i><br>Policy & Audit</div>
+        <div class="skill-item"><i class="fas fa-network-wired"></i><br>OT Security</div>
+        <div class="skill-item"><i class="fas fa-users"></i><br>Stakeholder Mgmt</div>
+    </div>
 </section>
 
-<section id="projects" class="fade-up">
-  <h2>Projects (Click to Expand)</h2>
+<section id="projects" class="fade-in">
+    <h2>Featured Projects</h2>
 
-  <div class="card project-energy">
-    <div class="card-header">
-      <h3>Energy Consumption Prediction (ML)</h3>
-      <span>Machine Learning • Risk Modelling</span>
+    <div class="card">
+        <div class="card-header">
+            <h3><i class="fas fa-bolt"></i> Energy Consumption Prediction</h3>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="card-content">
+            <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=800" alt="Energy Project" class="project-img">
+            <p>Developed regression-based ML models to predict monthly energy consumption. Evaluated Ridge and Lasso techniques to optimize for operational risk assessment.</p>
+        </div>
     </div>
-    <div class="card-content">
-      <p>
-        Developed regression-based machine learning models to predict monthly
-        energy consumption using engineered features and exploratory data analysis.
-      </p>
-      <p>
-        The project focused on risk modelling, evaluating linear, ridge, and lasso
-        regression techniques to balance accuracy, interpretability, and overfitting
-        — aligning closely with real-world operational risk assessment.
-      </p>
-    </div>
-  </div>
 
-  <div class="card project-db">
-    <div class="card-header">
-      <h3>Smart Learning Platform – MongoDB</h3>
-      <span>NoSQL • Data Architecture</span>
+    <div class="card">
+        <div class="card-header">
+            <h3><i class="fas fa-brain"></i> AI Symposium Research</h3>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="card-content">
+            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800" alt="AI Project" class="project-img">
+            <p>Analyzed governance gaps and ethical concerns in emotionally intelligent AI systems. Proposed mitigation strategies aligned with cyber security principles.</p>
+        </div>
     </div>
-    <div class="card-content">
-      <p>
-        Designed a scalable MongoDB schema for a smart, connected learning ecosystem
-        supporting subscriptions, downloadable content, analytics, and usage tracking.
-      </p>
-      <p>
-        Emphasis was placed on data integrity, performance, and governance,
-        ensuring the platform could scale securely while maintaining visibility
-        into user behaviour and operational metrics.
-      </p>
-    </div>
-  </div>
-
-  <div class="card project-ai">
-    <div class="card-header">
-      <h3>AI Symposium Research</h3>
-      <span>AI Ethics • Governance</span>
-    </div>
-    <div class="card-content">
-      <p>
-        Conducted academic research on the risks and benefits of emotionally
-        intelligent generative AI systems within organisational and societal contexts.
-      </p>
-      <p>
-        Analysed governance gaps, ethical concerns, and regulatory challenges,
-        proposing risk mitigation strategies aligned with emerging AI governance
-        frameworks and cyber security principles.
-      </p>
-    </div>
-  </div>
 </section>
 
-<section id="experience" class="fade-up">
-  <h2>Professional Experience (Click to Expand)</h2>
-
- <div class="exp-card">
-  <div class="card-header">
-    <h3>Calibration Technician – NVMS</h3>
-    <span class="exp-date">Current | WA</span>
-  </div>
-
-  <div class="card-content">
-    <ul>
-      <li>Designed and implemented organisation-wide Cyber Security policies governing IT and OT systems in a regulated laboratory environment.</li>
-      <li>Conducted cyber and operational risk assessments across instrumentation, data flows, and supporting IT infrastructure.</li>
-      <li>Developed Python-based automation tools and Power BI dashboards to improve compliance reporting, audit readiness, and management visibility.</li>
-      <li>Built Power BI dashboards to monitor calibration performance, cybersecurity vulnerabilities, and system integrity.</li>
-      <li>Integrated data management systems to streamline calibration workflows and ensure full traceability.</li>
-      <li>Collaborated with engineers and management to embed cybersecurity best practices into operational processes.</li>
-      <li>Performed calibration and maintenance of noise meters in line with regulatory and accreditation standards.</li>
-      <li>Managed SAP-based inventory, quoting, booking, invoicing, and reporting activities.</li>
-      <li>Implemented process improvements to enhance accuracy, efficiency, and turnaround time.</li>
-      <li>Managed laboratory scheduling, equipment maintenance, workflow coordination, and quality control.</li>
-      <li>Maintained full regulatory, quality, and audit documentation.</li>
-      <li>Provided technical support and training to internal teams.</li>
-    </ul>
-  </div>
-</div>
-
-  <div class="card">
-    <div class="card-header">
-      <h3>Team Leader – Materials Technology Centre</h3>
-      <span>Sep 2021 – Dec 2023</span>
+<section id="experience" class="fade-in">
+    <h2>Professional Journey</h2>
+    <div class="card">
+        <div class="card-header">
+            <div>
+                <h3 style="margin:0">Calibration Technician</h3>
+                <small>NVMS | Current</small>
+            </div>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="card-content">
+            <ul>
+                <li>Implemented Cyber Security policies for IT/OT systems.</li>
+                <li>Created Power BI dashboards for vulnerability monitoring.</li>
+                <li>Automated compliance reporting using Python.</li>
+            </ul>
+        </div>
     </div>
-    <div class="card-content">
-      <p>
-        Led materials testing operations under Australian Standards and NATA
-        accreditation, ensuring consistent quality and regulatory compliance.
-      </p>
-      <p>
-        Managed audits, non-conformances, trend analysis, and continuous improvement
-        initiatives while providing technical guidance to teams and stakeholders.
-      </p>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-header">
-      <h3>Laboratory Technician – Midland Brick</h3>
-      <span>Jan 2020 – Sep 2021</span>
-    </div>
-    <div class="card-content">
-      <p>
-        Conducted compliance testing for environmental and operational risks,
-        maintaining secure digital records and instrumentation data systems
-        aligned with regulatory requirements.
-      </p>
-    </div>
-  </div>
-</section>
-
-<section id="education" class="fade-up">
-  <h2>Education</h2>
-  <p><strong>Master of ICT</strong> – University of the Sunshine Coast (Expected 2025)</p>
-  <p>Major: Cyber Security & Data Analysis</p>
-  <p><strong>Diploma of Information Technology</strong> – Equinim College</p>
-  <p><strong>Bachelor & Master of Science</strong> – Biotechnology</p>
-</section>
-
-<section id="contact" class="fade-up">
-  <h2>Contact</h2>
-  <p>📍 Aveley, WA 6069</p>
-  <p>📧 p.kh2601@gmail.com</p>
-  <p>📱 +61 415 225 295</p>
-  <p>🔗 LinkedIn: linkedin.com/in/khushboo-patel-1959a812a</p>
 </section>
 
 <footer>
-  © 2026 Khushboo Patel — Cyber Security & Data Analytics Portfolio
+    <p>© 2026 Khushboo Patel • Built for Cyber Security Excellence</p>
+    <div style="font-size: 1.5rem; gap: 15px; display: flex; justify-content: center; margin-top: 10px;">
+        <a href="#" style="color:inherit"><i class="fab fa-linkedin"></i></a>
+        <a href="#" style="color:inherit"><i class="fab fa-github"></i></a>
+        <a href="mailto:p.kh2601@gmail.com" style="color:inherit"><i class="fas fa-envelope"></i></a>
+    </div>
 </footer>
 
 <script>
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("show")});
-},{threshold:0.2});
-document.querySelectorAll(".fade-up").forEach(el=>observer.observe(el));
+    // Dark Mode Toggle
+    const btn = document.getElementById("theme-toggle");
+    btn.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        const icon = btn.querySelector("i");
+        icon.classList.toggle("fa-moon");
+        icon.classList.toggle("fa-sun");
+    });
 
-document.querySelectorAll(".card").forEach(card=>{
-  card.addEventListener("click",()=>card.classList.toggle("active"));
-});
+    // Accordion Logic
+    document.querySelectorAll(".card").forEach(card => {
+        card.addEventListener("click", () => {
+            card.classList.toggle("active");
+            const icon = card.querySelector(".fa-chevron-down");
+            if(icon) icon.style.transform = card.classList.contains("active") ? "rotate(180deg)" : "rotate(0deg)";
+        });
+    });
+
+    // Reveal on Scroll
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add("visible");
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
 </script>
 
 </body>
