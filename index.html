@@ -6,7 +6,7 @@
     <title>Khushboo Patel | Cyber Security & Data Executive</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="image_2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <style>
         :root {
@@ -51,8 +51,8 @@
         .profile-container { margin-bottom: 35px; }
 
         .profile-img {
-            width: 200px;
-            height: 200px;
+            width: 220px;
+            height: 220px;
             border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
             object-fit: cover;
             border: 6px solid var(--surface);
@@ -73,13 +73,14 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        header p { font-size: 1.35rem; font-weight: 600; color: var(--primary); letter-spacing: 1px; margin-top: 10px;}
 
         /* STICKY NAV */
         nav {
             position: sticky;
             top: 20px;
             width: 90%;
-            max-width: 700px;
+            max-width: 750px;
             margin: 0 auto;
             background: var(--glass);
             backdrop-filter: blur(16px);
@@ -93,7 +94,7 @@
             box-shadow: var(--shadow);
         }
 
-        nav a { text-decoration: none; color: var(--text-body); font-weight: 600; font-size: 0.95rem; }
+        nav a { text-decoration: none; color: var(--text-body); font-weight: 600; font-size: 0.95rem; transition: 0.3s; }
         nav a:hover { color: var(--primary); }
 
         /* SECTIONS */
@@ -123,12 +124,20 @@
         .card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
 
         .card-header { padding: 30px; display: flex; justify-content: space-between; align-items: center; }
+        .card-header h3 { font-size: 1.4rem; color: var(--text-heading); }
+        .card-header span, .card-header small { color: var(--primary); font-weight: 600; font-size: 0.95rem; }
+        
         .card-content { padding: 0 30px; max-height: 0; overflow: hidden; transition: 0.5s ease; opacity: 0; }
         .card.active .card-content { padding-bottom: 30px; max-height: 1000px; opacity: 1; border-top: 1px solid #f1f5f9; padding-top: 20px; }
 
+        /* LISTS */
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+
         /* SKILLS */
         .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .skill-box { background: white; padding: 25px; border-radius: 16px; border: 1px solid var(--border); display: flex; align-items: center; gap: 15px; font-weight: 600; }
+        .skill-box { background: white; padding: 25px; border-radius: 16px; border: 1px solid var(--border); display: flex; align-items: center; gap: 15px; font-weight: 600; transition: 0.3s; }
+        .skill-box:hover { transform: translateY(-3px); border-color: var(--primary-light); }
         .skill-box i { color: var(--primary); font-size: 1.5rem; }
 
         /* BUTTONS */
@@ -141,20 +150,28 @@
             text-decoration: none;
             font-weight: 700;
             margin-top: 40px;
+            transition: 0.3s;
             box-shadow: 0 15px 30px rgba(13, 148, 136, 0.3);
         }
+        .resume-btn:hover { background: var(--primary-dark); transform: scale(1.05); }
 
         footer { text-align: center; padding: 80px 20px; background: #042f2e; color: #94a3b8; }
 
         .fade-in { opacity: 0; transform: translateY(30px); transition: 0.8s ease-out; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .fade-in.show { opacity: 1; transform: translateY(0); }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 3rem; }
+            nav { gap: 0.8rem; padding: 0.8rem; flex-wrap: wrap; }
+            .section-title { font-size: 2.2rem; }
+        }
     </style>
 </head>
 <body>
 
 <header>
     <div class="profile-container">
-        <img src="image_2.png" alt="Khushboo Patel Professional Portfolio" class="profile-img">
+        <img src="IMG_2251.jpeg" alt="Khushboo Patel Professional Portfolio" class="profile-img">
     </div>
     <h1>Khushboo Patel</h1>
     <p>Cyber Security • Data Analyst • IT Governance</p>
@@ -165,6 +182,7 @@
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
     <a href="#contact">Contact</a>
 </nav>
 
@@ -175,14 +193,14 @@
     <p>Bringing several years of experience in calibration, laboratory operations, and technical service delivery, with a strong background in data management systems, equipment workflows, quality control, and regulatory compliance. Adept at integrating calibration processes with digital systems, enhancing accuracy, traceability, and reporting efficiency.</p>
     
     <div style="text-align:center">
-        <a href="Khushboo_Patel_Resume 2025.docx" class="resume-btn" download>📄 Download Official Resume</a>
+        <a href="Khushboo_Patel_Resume.pdf" class="resume-btn" download>📄 Download Official Resume</a>
     </div>
 </section>
 
 <section id="skills" class="fade-in">
     <h2 class="section-title">Key Skills</h2>
     <div class="skills-grid">
-        <div class="skill-box"><i class="fas fa-shield-halved"></i> Cyber Risk Management (ISO 27001, NIST, COBIT)</div>
+        <div class="skill-box"><i class="fas fa-shield-halved"></i> Cyber Risk Management (ISO 27001, NIST, COBIT, ISA/IEC)</div>
         <div class="skill-box"><i class="fas fa-network-wired"></i> IT & OT Security & Governance</div>
         <div class="skill-box"><i class="fas fa-code"></i> Python, SQL, Power BI, Automation</div>
         <div class="skill-box"><i class="fas fa-clipboard-check"></i> Policy Development & Audit Readiness</div>
@@ -192,71 +210,65 @@
 </section>
 
 <section id="projects" class="fade-in">
-    <h2 class="section-title">Projects (Click to Expand)</h2>
+    <h2 class="section-title">Technical Projects (Click to Expand)</h2>
 
     <div class="card">
         <div class="card-header">
             <h3>Energy Consumption Prediction (ML)</h3>
-            <i class="fas fa-chevron-down"></i>
+            <span>Machine Learning • Risk Modelling</span>
         </div>
         <div class="card-content">
             <p>Developed regression-based machine learning models to predict monthly energy consumption using engineered features and exploratory data analysis.</p>
-            <p>The project focused on risk modelling, evaluating linear, ridge, and lasso regression techniques to balance accuracy, interpretability, and overfitting.</p>
+            <p>The project focused on risk modelling, evaluating linear, ridge, and lasso regression techniques to balance accuracy, interpretability, and overfitting — aligning closely with real-world operational risk assessment.</p>
         </div>
     </div>
 
-        <div class="card project-db">
-    <div class="card-header">
-      <h3>Smart Learning Platform – MongoDB</h3>
-      <span>NoSQL • Data Architecture</span>
-    </div>
-    <div class="card-content">
-      <p>
-        Designed a scalable MongoDB schema for a smart, connected learning ecosystem
-        supporting subscriptions, downloadable content, analytics, and usage tracking.
-      </p>
-      <p>
-        Emphasis was placed on data integrity, performance, and governance,
-        ensuring the platform could scale securely while maintaining visibility
-        into user behaviour and operational metrics.
-      </p>
-    </div>
-  </div>
-    
     <div class="card">
         <div class="card-header">
             <h3>Smart Learning Platform – MongoDB</h3>
-            <i class="fas fa-chevron-down"></i>
+            <span>NoSQL • Data Architecture</span>
         </div>
         <div class="card-content">
-            <p>Designed a scalable MongoDB schema for a smart, connected learning ecosystem supporting subscriptions, content, and analytics. Focus was on data integrity, performance, and governance.</p>
+            <p>Designed a scalable MongoDB schema for a smart, connected learning ecosystem supporting subscriptions, downloadable content, analytics, and usage tracking.</p>
+            <p>Emphasis was placed on data integrity, performance, and governance, ensuring the platform could scale securely while maintaining visibility into user behaviour and operational metrics.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h3>AI Symposium Research</h3>
+            <span>AI Ethics • Governance</span>
+        </div>
+        <div class="card-content">
+            <p>Conducted academic research on the risks and benefits of emotionally intelligent generative AI systems within organisational and societal contexts.</p>
+            <p>Analysed governance gaps, ethical concerns, and regulatory challenges, proposing risk mitigation strategies aligned with emerging AI governance frameworks and cyber security principles.</p>
         </div>
     </div>
 </section>
 
 <section id="experience" class="fade-in">
-    <h2 class="section-title">Professional Experience</h2>
+    <h2 class="section-title">Professional Experience (Click to Expand)</h2>
 
     <div class="card">
         <div class="card-header">
             <div>
-                <h3 style="color:var(--primary)">Calibration Technician – NVMS</h3>
+                <h3>Calibration Technician – NVMS</h3>
                 <small>Current | WA</small>
             </div>
             <i class="fas fa-chevron-down"></i>
         </div>
         <div class="card-content">
-            <ul style="padding-left:20px">
+            <ul>
                 <li>Designed and implemented organisation-wide Cyber Security policies governing IT and OT systems in a regulated laboratory environment.</li>
                 <li>Conducted cyber and operational risk assessments across instrumentation, data flows, and supporting IT infrastructure.</li>
-                <li>Developed Python-based automation tools and Power BI dashboards to improve compliance reporting and management visibility.</li>
+                <li>Developed Python-based automation tools and Power BI dashboards to improve compliance reporting, audit readiness, and management visibility.</li>
                 <li>Built Power BI dashboards to monitor calibration performance, cybersecurity vulnerabilities, and system integrity.</li>
                 <li>Integrated data management systems to streamline calibration workflows and ensure full traceability.</li>
                 <li>Collaborated with engineers and management to embed cybersecurity best practices into operational processes.</li>
                 <li>Performed calibration and maintenance of noise meters in line with regulatory and accreditation standards.</li>
                 <li>Managed SAP-based inventory, quoting, booking, invoicing, and reporting activities.</li>
                 <li>Implemented process improvements to enhance accuracy, efficiency, and turnaround time.</li>
-                <li>Managed laboratory scheduling, equipment maintenance, and quality control.</li>
+                <li>Managed laboratory scheduling, equipment maintenance, workflow coordination, and quality control.</li>
                 <li>Maintained full regulatory, quality, and audit documentation.</li>
                 <li>Provided technical support and training to internal teams.</li>
             </ul>
@@ -272,79 +284,85 @@
             <i class="fas fa-chevron-down"></i>
         </div>
         <div class="card-content">
-           <li>Coordinated materials testing (cement physical & chemical) under Australian Standards & NATA</li>
-            <li>Ensured compliance with Quality Manual, ITPs, and accreditation requirements</li>
-            <li>Reviewed test data, issued reports, and maintained statistical databases</li>
-            <li>Managed product specification changes and NCRs</li>
-            <li>Delivered trend reporting and quality improvement recommendations</li>
-            <li>Participated in R&D and design activities</li>
-            <li>Managed customer complaints and resolutions</li>
-            <li>Provided technical advice to Technical Managers and Sales Teams</li>
-            <li>Maintained hazard awareness and workplace safety</li>
-            <li>Assisted in business, NATA, and safety audits</li>
+            <ul>
+                <li>Coordinated materials testing (cement physical & chemical) under Australian Standards & NATA accreditation.</li>
+                <li>Ensured compliance with Quality Manual, ITPs, and accreditation requirements.</li>
+                <li>Reviewed test data, issued reports, and maintained statistical databases.</li>
+                <li>Managed product specification changes and Non-Conformance Reports (NCRs).</li>
+                <li>Delivered trend reporting and quality improvement recommendations.</li>
+                <li>Participated in Research & Development (R&D) and design activities.</li>
+                <li>Managed customer complaints and resolutions.</li>
+                <li>Provided technical advice to Technical Managers and Sales Teams.</li>
+                <li>Maintained hazard awareness and workplace safety.</li>
+                <li>Assisted in business, NATA, and safety audits.</li>
+            </ul>
         </div>
     </div>
 
-     <div class="card">
+    <div class="card">
         <div class="card-header">
             <div>
-                <h3>Laboratory Technician - Midland Brick</h3>
-                <small>Jan 2020 - Sep 2021</small>
+                <h3>Laboratory Technician – Midland Brick</h3>
+                <small>Jan 2020 – Sep 2021</small>
             </div>
             <i class="fas fa-chevron-down"></i>
         </div>
         <div class="card-content">
-           <li>Conducted compliance testing for environmental and operational risks</li>
-            <li>Managed instrumentation data and reporting systems</li>
-            <li>Developed secure digital record systems for testing and compliance</li>
-            <li>Managed product specification changes and NCRs</li>
-            <li>Delivered trend reporting and quality improvement recommendations</li>
-            <li>Participated in R&D and design activities</li>
-            <li>Managed customer complaints and resolutions</li>
-            <li>Provided technical advice to Technical Managers and Sales Teams</li>
-            <li>Maintained hazard awareness and workplace safety</li>
-            <li>Assisted in business and safety audits</li>
+            <ul>
+                <li>Conducted compliance testing for environmental and operational risks.</li>
+                <li>Managed instrumentation data and reporting systems.</li>
+                <li>Developed secure digital record systems for testing and compliance.</li>
+                <li>Maintained secure digital records and instrumentation data systems aligned with regulatory requirements.</li>
+                <li>Delivered trend reporting and quality improvement recommendations.</li>
+                <li>Participated in R&D and design activities.</li>
+                <li>Managed customer complaints and resolutions.</li>
+                <li>Provided technical advice to Technical Managers and Sales Teams.</li>
+                <li>Maintained hazard awareness and workplace safety.</li>
+                <li>Assisted in business and safety audits.</li>
+            </ul>
         </div>
     </div>
 </section>
 
-<section id="education" class="fade-up">
-  <h2>Education</h2>
-  <p><strong>Master of ICT</strong> – University of the Sunshine Coast (Expected 2025)</p>
-  <p>Major: Cyber Security & Data Analysis</p>
-  <p><strong>Diploma of Information Technology</strong> – Equinim College</p>
-  <p><strong>Bachelor & Master of Science</strong> – Biotechnology</p>
+<section id="education" class="fade-in">
+    <h2 class="section-title">Education</h2>
+    <div class="skills-grid">
+        <div class="skill-box"><strong>Master of ICT</strong> – University of the Sunshine Coast (Expected 2025)</div>
+        <div class="skill-box"><strong>Diploma of IT</strong> – Equinim College</div>
+        <div class="skill-box"><strong>BSc & MSc</strong> – Biotechnology</div>
+    </div>
 </section>
 
-<section id="contact" class="fade-up">
-  <h2>Contact</h2>
-  <p>📍 Aveley, WA 6069</p>
-  <p>📧 p.kh2601@gmail.com</p>
-  <p>📱 +61 415 225 295</p>
-  <p>🔗 LinkedIn: linkedin.com/in/khushboo-patel-1959a812a</p>
+<section id="contact" class="fade-in">
+    <h2 class="section-title">Contact Information</h2>
+    <div class="skills-grid">
+        <div class="skill-box"><i class="fas fa-location-dot"></i> Aveley, WA 6069</div>
+        <div class="skill-box"><i class="fas fa-envelope"></i> p.kh2601@gmail.com</div>
+        <div class="skill-box"><i class="fas fa-phone"></i> +61 415 225 295</div>
+        <div class="skill-box"><i class="fab fa-linkedin"></i> linkedin.com/in/khushboo-patel-1959a812a</div>
+    </div>
 </section>
 
 <footer>
-  © 2026 Khushboo Patel — Cyber Security & Data Analytics Portfolio
+    <p>© 2026 Khushboo Patel — Cyber Security & Data Analytics Portfolio</p>
 </footer>
 
 <script>
-<footer>
-  © 2026 Khushboo Patel — Cyber Security & Data Analytics Portfolio
-</footer>
+    // Smooth Reveal Animation
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(e => { if(e.isIntersecting) e.target.classList.add("show") });
+    }, { threshold: 0.1 });
+    document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
 
-<script>
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("show")});
-},{threshold:0.2});
-document.querySelectorAll(".fade-up").forEach(el=>observer.observe(el));
-
-document.querySelectorAll(".card").forEach(card=>{
-  card.addEventListener("click",()=>card.classList.toggle("active"));
-});
+    // Card Expansion Logic
+    document.querySelectorAll(".card").forEach(card => {
+        card.addEventListener("click", () => {
+            card.classList.toggle("active");
+            const icon = card.querySelector(".fa-chevron-down");
+            if(icon) icon.style.transform = card.classList.contains("active") ? "rotate(180deg)" : "rotate(0deg)";
+        });
+    });
 </script>
 
-</body>
-</html>
 </body>
 </html>
