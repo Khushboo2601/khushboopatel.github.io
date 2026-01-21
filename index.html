@@ -4,62 +4,138 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Khushboo Patel | Cyber Security & Data Analyst</title>
+
 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
-* {margin:0; padding:0; box-sizing:border-box;}
-body {font-family:'Poppins', sans-serif; line-height:1.6; scroll-behavior:smooth; background:#f9f9f9; color:#333;}
-a {text-decoration:none; color:inherit;}
-img {max-width:100%; border-radius:8px; transition:0.3s;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f9f9f9;
+  color:#333;
+  line-height:1.6;
+}
+a{text-decoration:none;color:inherit}
+section{padding:70px 20px;max-width:1100px;margin:auto}
+h2{margin-bottom:30px;color:#0a192f;border-bottom:2px solid #0a192f;display:inline-block}
 
-/* Header */
-header {background:#0a192f; color:white; text-align:center; padding:100px 20px; position:relative; overflow:hidden;}
-header h1 {font-size:2.8em; margin-bottom:10px;}
-header p {font-size:1.2em; color:#64ffda;}
-header::before {content:""; position:absolute; width:200%; height:200%; top:-50%; left:-50%; background:linear-gradient(45deg,#64ffda,#0a192f,#112240,#0a192f); animation:rotate 20s linear infinite; z-index:0;}
-@keyframes rotate{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
-header *{position:relative; z-index:1;}
+/* HEADER */
+header{
+  background:#0a192f;
+  color:white;
+  text-align:center;
+  padding:110px 20px;
+}
+header h1{font-size:3em}
+header p{color:#64ffda;font-size:1.2em;margin-top:10px}
 
-/* Navigation */
-nav{display:flex; justify-content:center; gap:25px; background:#112240; padding:15px; position:sticky; top:0; z-index:100;}
-nav a{color:white; font-weight:600; transition:0.3s;}
-nav a:hover{color:#64ffda;}
+/* NAV */
+nav{
+  position:sticky;
+  top:0;
+  background:#112240;
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  padding:15px;
+  z-index:100;
+}
+nav a{color:white;font-weight:600}
+nav a:hover{color:#64ffda}
 
-/* Sections */
-section{padding:60px 20px; max-width:1000px; margin:auto;}
-h2{border-bottom:2px solid #0a192f; padding-bottom:5px; margin-bottom:25px; color:#0a192f;}
+/* FADE */
+.fade-up{
+  opacity:0;
+  transform:translateY(30px);
+  transition:0.7s ease;
+}
+.fade-up.show{
+  opacity:1;
+  transform:none;
+}
 
-/* Skills / Projects */
-.skills, .projects{display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px;}
-.skills div, .project-card{border:1px solid #ccc; padding:20px; border-radius:10px; background:white; transition:0.3s; opacity:0; transform:translateY(20px);}
-.skills div:hover, .project-card:hover{transform:translateY(-5px); box-shadow:0 8px 25px rgba(0,0,0,0.15);}
+/* SKILLS */
+.skills{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+.skill-box{
+  background:white;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.08);
+}
 
-/* Contact */
-#contact a{color:#0a192f; font-weight:600;}
+/* PROJECTS */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+}
+.project-card{
+  background:white;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.12);
+}
 
-/* Footer */
-footer{text-align:center; padding:20px; color:#555; font-size:0.9em; background:#f4f4f4; margin-top:40px;}
+/* TIMELINE */
+.timeline{
+  border-left:4px solid #64ffda;
+  padding-left:25px;
+}
+.timeline-item{
+  margin-bottom:35px;
+}
+.timeline-item h3{color:#0a192f}
+.timeline-item span{font-size:0.9em;color:#555}
 
-/* Dark Mode */
-body.dark-mode{background:#0a192f; color:white;}
-body.dark-mode nav{background:#112240;}
-body.dark-mode .skills div, body.dark-mode .project-card{background:#112240; border-color:#0a192f;}
-body.dark-mode footer{background:#112240; color:#bbb;}
+/* CONTACT */
+#contact a{color:#0a192f;font-weight:600}
 
-/* Dark Mode Button */
-.dark-toggle{position:fixed; top:20px; right:20px; background:#64ffda; color:#0a192f; border:none; padding:10px 15px; border-radius:50px; cursor:pointer; font-weight:600; z-index:1000;}
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:25px;
+  background:#f1f1f1;
+  margin-top:40px;
+}
 
-/* Animation */
-.fade-up{opacity:0; transform:translateY(20px); transition:0.6s ease-out;}
-.fade-up.show{opacity:1; transform:translateY(0);}
+/* DARK MODE */
+body.dark{
+  background:#0a192f;
+  color:white;
+}
+body.dark nav{background:#020c1b}
+body.dark .skill-box,
+body.dark .project-card{
+  background:#112240;
+}
+body.dark footer{background:#112240}
+
+/* BUTTON */
+.dark-btn{
+  position:fixed;
+  top:20px;
+  right:20px;
+  background:#64ffda;
+  border:none;
+  padding:10px 15px;
+  border-radius:30px;
+  cursor:pointer;
+  font-weight:600;
+}
 </style>
 </head>
+
 <body>
 
-<button class="dark-toggle" onclick="toggleDark()">🌙</button>
+<button class="dark-btn" onclick="toggleDark()">🌙</button>
 
 <header>
-  <h1>Hi, I'm Khushboo Patel</h1>
+  <h1>Khushboo Patel</h1>
   <p>Cyber Security • Data Analyst • IT Governance</p>
 </header>
 
@@ -68,135 +144,99 @@ body.dark-mode footer{background:#112240; color:#bbb;}
   <a href="#skills">Skills</a>
   <a href="#projects">Projects</a>
   <a href="#experience">Experience</a>
-  <a href="#education">Education</a>
-  <a href="#certifications">Certifications</a>
   <a href="#contact">Contact</a>
 </nav>
 
-<section id="about">
+<section id="about" class="fade-up">
   <h2>About Me</h2>
-  <p class="fade-up">Cyber Security & IT professional specialising in risk-driven data analytics, IT/OT governance, and compliance automation within regulated environments. Experienced in designing organisation-wide Cyber Security Policies, improving system integrity, and integrating compliance automation with Python, SQL, and Power BI. Skilled at bridging technical teams, business needs, and cybersecurity requirements to deliver clear actionable strategies. Bringing experience in calibration, laboratory operations, and technical service delivery with a strong background in data management, equipment workflows, and regulatory compliance.</p>
+  <p>
+    Cyber Security & IT professional specialising in risk-driven analytics,
+    IT/OT governance, and compliance automation in regulated environments.
+    Experienced in policy development, cyber risk assessments, Python automation,
+    and Power BI reporting.
+  </p>
 </section>
 
-<section id="skills">
+<section id="skills" class="fade-up">
   <h2>Key Skills</h2>
-  <div class="skills fade-up">
-    <div><i class="fas fa-shield-alt"></i> Cyber Risk Management (ISO 27001, NIST, COBIT, ISA/IEC)</div>
-    <div><i class="fas fa-network-wired"></i> IT & OT Security</div>
-    <div><i class="fas fa-bug"></i> Vulnerability Assessment</div>
-    <div><i class="fas fa-file-alt"></i> Policy Development</div>
-    <div><i class="fas fa-chart-line"></i> Risk Advisory & Audit Preparation</div>
-    <div><i class="fab fa-python"></i> Python</div>
-    <div><i class="fas fa-database"></i> SQL</div>
-    <div><i class="fab fa-html5"></i> HTML / JavaScript</div>
-    <div><i class="fas fa-chart-bar"></i> Power BI Dashboards</div>
-    <div><i class="fab fa-microsoft"></i> Microsoft 365 & SharePoint</div>
-    <div><i class="fas fa-users"></i> Leadership & Stakeholder Communication</div>
-    <div><i class="fas fa-check-circle"></i> Quality & Compliance Management</div>
+  <div class="skills">
+    <div class="skill-box">Cyber Risk Management (ISO 27001, NIST, COBIT)</div>
+    <div class="skill-box">IT & OT Security</div>
+    <div class="skill-box">Python • SQL • Power BI</div>
+    <div class="skill-box">Policy Development & Governance</div>
+    <div class="skill-box">Audit Preparation & Compliance</div>
+    <div class="skill-box">Stakeholder Communication</div>
   </div>
 </section>
 
-<section id="projects">
+<section id="projects" class="fade-up">
   <h2>Projects</h2>
-  <div class="projects fade-up">
+  <div class="projects">
     <div class="project-card">
       <h3>Energy Consumption Prediction</h3>
-      <p>ML-based risk modelling to forecast energy consumption and optimise operations.</p>
+      <p>ML-based risk modelling to forecast energy consumption.</p>
     </div>
     <div class="project-card">
       <h3>Smart Learning Platform</h3>
-      <p>MongoDB schema for connected learning ecosystem with analytics and automation.</p>
+      <p>MongoDB schema design for analytics-driven learning ecosystem.</p>
     </div>
     <div class="project-card">
       <h3>AI Symposium Research</h3>
-      <p>Study on emotionally intelligent AI risks and governance frameworks.</p>
+      <p>Governance risks of emotionally intelligent AI systems.</p>
     </div>
   </div>
 </section>
 
-<section id="experience">
+<section id="experience" class="fade-up">
   <h2>Professional Experience</h2>
-  <div class="projects fade-up"> <!-- using same grid style as projects -->
-    
-    <div class="project-card">
-      <h3>Calibration Technician – NVMS (Current)</h3>
-      <p>West Leederville, WA</p>
-      <ul>
-        <li>Designed & implemented Cyber Security Policy for IT/OT systems</li>
-        <li>Conducted cyber & operational risk assessments</li>
-        <li>Developed Python automation tools for compliance reporting</li>
-        <li>Built Power BI dashboards to monitor calibration and cybersecurity performance</li>
-        <li>Integrated data management systems to streamline workflows</li>
-      </ul>
+  <div class="timeline">
+    <div class="timeline-item">
+      <h3>Calibration Technician – NVMS</h3>
+      <span>Current | West Leederville, WA</span>
+      <p>Designed cyber security policies, conducted risk assessments,
+         built Python automation and Power BI dashboards.</p>
     </div>
-
-    <div class="project-card">
-      <h3>Team Leader – Materials Technology Centre (Sep 2021 – Dec 2023)</h3>
-      <p>Hazelmere, WA</p>
-      <ul>
-        <li>Coordinated materials testing under Australian Standards & NATA</li>
-        <li>Delivered quality improvement and trend reporting</li>
-        <li>Managed technical teams and audits</li>
-      </ul>
+    <div class="timeline-item">
+      <h3>Team Leader – Materials Technology Centre</h3>
+      <span>Sep 2021 – Dec 2023</span>
+      <p>Led materials testing teams, ensured NATA compliance,
+         delivered quality improvements.</p>
     </div>
-
-    <div class="project-card">
-      <h3>Laboratory Technician – Midland Brick (Jan 2020 – Sep 2021)</h3>
-      <p>South Guildford, WA</p>
-      <ul>
-        <li>Conducted compliance testing for environmental & operational risks</li>
-        <li>Developed secure digital record systems for compliance</li>
-      </ul>
+    <div class="timeline-item">
+      <h3>Laboratory Technician – Midland Brick</h3>
+      <span>Jan 2020 – Sep 2021</span>
+      <p>Managed instrumentation data, compliance testing,
+         and secure digital records.</p>
     </div>
-
-  </div>
-</section>
-<section id="education">
-  <h2>Education</h2>
-  <div class="fade-up">
-    <p><strong>Master of ICT</strong> – University of the Sunshine Coast (Expected 2025), Major: Cyber Security & Data Analysis</p>
-    <p><strong>Diploma of Information Technology</strong> – Equinim College, 2025</p>
-    <p><strong>Bachelor & Master of Science – Biotechnology</strong></p>
   </div>
 </section>
 
-<section id="certifications">
-  <h2>Certifications</h2>
-  <ul class="fade-up">
-    <li>Microsoft Certified: Security, Compliance & Identity Fundamentals</li>
-    <li>IT Specialist – Python</li>
-    <li>NATA – Quality Management in Laboratory</li>
-    <li>Excel Advanced – Power BI, VBA</li>
-  </ul>
-</section>
-
-<section id="contact">
+<section id="contact" class="fade-up">
   <h2>Contact</h2>
-  <p class="fade-up">📍 Aveley, WA 6069</p>
+  <p>📍 Aveley, WA</p>
   <p>📧 <a href="mailto:p.kh2601@gmail.com">p.kh2601@gmail.com</a></p>
-  <p>📱 +61 415 225 295</p>
-  <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/khushboo-patel-1959a812a" target="_blank">linkedin.com/in/khushboo-patel-1959a812a</a></p>
+  <p>🔗 <a href="https://www.linkedin.com/in/khushboo-patel-1959a812a" target="_blank">LinkedIn</a></p>
 </section>
 
 <footer>
-  © 2026 Khushboo Patel — Built with ❤️
+  © 2026 Khushboo Patel — Cyber Security Portfolio
 </footer>
 
 <script>
-// Dark Mode Toggle
-function toggleDark(){document.body.classList.toggle('dark-mode');}
+function toggleDark(){
+  document.body.classList.toggle("dark");
+}
 
-// Fade-in Animation
-const faders = document.querySelectorAll('.fade-up');
-const appearOptions = {threshold:0.2, rootMargin:"0px 0px -50px 0px"};
-const appearOnScroll = new IntersectionObserver(function(entries, observer){
+const faders = document.querySelectorAll(".fade-up");
+const observer = new IntersectionObserver(entries=>{
   entries.forEach(entry=>{
-    if(!entry.isIntersecting) return;
-    entry.target.classList.add('show');
-    observer.unobserve(entry.target);
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
   });
-}, appearOptions);
-faders.forEach(fader => appearOnScroll.observe(fader));
+},{threshold:0.2});
+
+faders.forEach(el=>observer.observe(el));
 </script>
 
 </body>
