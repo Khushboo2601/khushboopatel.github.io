@@ -10,15 +10,17 @@
 
     <style>
         :root {
-            --primary: #6366f1; /* Indigo */
-            --primary-dark: #4f46e5;
-            --surface: #ffffff;
-            --background: #f8fafc;
-            --text-heading: #0f172a;
-            --text-body: #475569;
-            --glass: rgba(255, 255, 255, 0.7);
-            --border: rgba(226, 232, 240, 0.8);
-            --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+            /* NEW Green Palette - Cyber Teal & Mint */
+            --primary: #0d9488;      /* Deep Teal - Professional main color */
+            --primary-light: #5eead4; /* Bright Mint - For accents and gradients */
+            --primary-dark: #0f766e;  /* Darker Teal - For hover states */
+            --surface: #ffffff;       /* Pure white for cards */
+            --background: #f0fdfa;    /* Very pale cool mint background */
+            --text-heading: #134e4a;  /* Deep dark teal for headings (high contrast) */
+            --text-body: #334155;     /* Slate gray for easy reading */
+            --glass: rgba(255, 255, 255, 0.85); /* Frosted glass effect */
+            --border: rgba(13, 148, 136, 0.15); /* Subtle green border */
+            --shadow: 0 10px 25px -5px rgba(13, 148, 136, 0.05), 0 8px 10px -6px rgba(13, 148, 136, 0.05);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -30,15 +32,15 @@
             color: var(--text-body);
             line-height: 1.7;
             overflow-x: hidden;
+            background-image: radial-gradient(at 100% 0%, hsla(173,90%,90%,1) 0px, transparent 50%), radial-gradient(at 0% 100%, hsla(185,90%,90%,1) 0px, transparent 50%);
+            background-attachment: fixed;
         }
 
-        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--text-heading); }
+        h1, h2, h3, h4 { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--text-heading); }
 
         /* HEADER & HERO */
         header {
-            min-height: 80vh;
-            background: radial-gradient(circle at top right, #e0e7ff, transparent),
-                        radial-gradient(circle at bottom left, #f1f5f9, transparent);
+            min-height: 85vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -50,203 +52,246 @@
 
         .profile-container {
             position: relative;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
 
+        /* Fixed Profile Photo Styling */
         .profile-img {
-            width: 180px;
-            height: 180px;
-            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            width: 200px;
+            height: 200px;
+            /* Organic "blob" shape */
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
             object-fit: cover;
-            border: 8px solid white;
-            box-shadow: var(--shadow);
+            border: 6px solid var(--surface);
+            box-shadow: 0 20px 40px -10px rgba(13, 148, 136, 0.3);
+            /* Gentle morphing animation */
             animation: morph 8s ease-in-out infinite;
+            background-color: var(--primary-light); /* Fallback color */
         }
 
         @keyframes morph {
-            0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
-            50% { border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%; }
-            100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+            0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+            50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+            100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
         }
 
-        header h1 { font-size: 4rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 10px; }
-        header p { font-size: 1.25rem; font-weight: 500; color: var(--primary); text-transform: uppercase; letter-spacing: 2px; }
+        header h1 { 
+            font-size: 4.5rem; 
+            font-weight: 800; 
+            letter-spacing: -1.5px; 
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, var(--text-heading), var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        header p { font-size: 1.35rem; font-weight: 600; color: var(--primary); letter-spacing: 1px; }
 
         /* STICKY NAV */
         nav {
             position: sticky;
-            top: 0;
+            top: 20px; /* Subtle float effect */
+            width: 90%;
+            max-width: 600px;
+            margin: 0 auto;
             background: var(--glass);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border);
             z-index: 1000;
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            padding: 1rem;
+            gap: 1.5rem;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            box-shadow: var(--shadow);
         }
 
         nav a {
             text-decoration: none;
-            color: var(--text-heading);
+            color: var(--text-body);
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             transition: 0.3s;
             position: relative;
+            padding: 5px 10px;
         }
 
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary);
-            transition: 0.3s;
-        }
-
-        nav a:hover::after { width: 100%; }
+        nav a:hover { color: var(--primary); }
 
         /* SECTIONS */
         section {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 100px 25px;
+            padding: 120px 25px;
         }
 
         .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 50px;
+            font-size: 2.8rem;
+            margin-bottom: 60px;
             text-align: center;
             font-weight: 800;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-light);
+            margin: 20px auto 0;
+            border-radius: 2px;
         }
 
         /* ABOUT SECTION */
-        #about p { margin-bottom: 25px; font-size: 1.1rem; }
+        #about p { margin-bottom: 25px; font-size: 1.15rem; color: var(--text-body); }
 
         .resume-btn {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             background: var(--primary);
             color: white;
-            padding: 15px 35px;
-            border-radius: 12px;
+            padding: 18px 40px;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
+            font-size: 1.1rem;
             transition: 0.3s;
-            box-shadow: 0 10px 20px -5px rgba(99, 102, 241, 0.4);
+            box-shadow: 0 15px 30px -10px rgba(13, 148, 136, 0.4);
         }
 
-        .resume-btn:hover { transform: translateY(-3px); background: var(--primary-dark); }
+        .resume-btn:hover { transform: translateY(-3px); background: var(--primary-dark); box-shadow: 0 20px 40px -10px rgba(13, 148, 136, 0.5); }
 
         /* SKILLS GRID */
         .skills-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
         }
 
         .skill-card {
-            background: white;
-            padding: 30px;
-            border-radius: 20px;
+            background: var(--surface);
+            padding: 35px;
+            border-radius: 24px;
             border: 1px solid var(--border);
             transition: 0.3s;
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 20px;
+            font-weight: 600;
+            color: var(--text-heading);
         }
 
-        .skill-card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: var(--shadow); }
-        .skill-card i { font-size: 1.5rem; color: var(--primary); }
+        .skill-card:hover { transform: translateY(-7px); border-color: var(--primary-light); box-shadow: 0 20px 40px -15px rgba(13, 148, 136, 0.2); }
+        .skill-card i { font-size: 1.8rem; color: var(--primary); }
 
         /* PROJECT CARDS */
         .project-card {
-            background: white;
+            background: var(--surface);
             border-radius: 24px;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             border: 1px solid var(--border);
             overflow: hidden;
             transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             cursor: pointer;
+            position: relative;
         }
 
-        .project-card:hover { transform: scale(1.02); box-shadow: var(--shadow); }
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; bottom: 0;
+            width: 6px;
+            background: var(--primary-light); /* Unified green accent border */
+            transition: 0.3s;
+        }
+        
+        .project-card:hover::before { width: 10px; background: var(--primary); }
+        .project-card:hover { transform: scale(1.01) translateY(-5px); box-shadow: var(--shadow); }
 
         .project-header {
-            padding: 30px;
+            padding: 35px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: linear-gradient(to right, #fafafa, #ffffff);
+            background: linear-gradient(to right, rgba(240, 253, 250, 0.5), var(--surface));
         }
+        
+        .project-header h3 { color: var(--primary-dark); margin-bottom: 5px; }
 
         .project-content {
-            padding: 0 30px;
+            padding: 0 35px;
             max-height: 0;
             overflow: hidden;
-            transition: all 0.5s ease;
+            transition: all 0.6s ease;
             opacity: 0;
         }
 
-        .project-card.active .project-content { padding: 30px; max-height: 500px; opacity: 1; border-top: 1px solid var(--border); }
-        .project-card.active .fa-chevron-down { transform: rotate(180deg); }
-
-        /* PROJECT BORDERS (Maintain original logic) */
-        .project-energy { border-left: 8px solid #A8E6CF; }
-        .project-ai { border-left: 8px solid #FFD6C9; }
-        .project-db { border-left: 8px solid #DCCEF9; }
+        .project-card.active .project-content { padding-bottom: 35px; max-height: 600px; opacity: 1; }
+        .project-card.active .fa-chevron-down { transform: rotate(180deg); color: var(--primary); }
 
         /* TIMELINE (EXPERIENCE) */
         .timeline-item {
             position: relative;
-            padding-left: 40px;
-            margin-bottom: 40px;
-            border-left: 2px solid var(--border);
+            padding-left: 45px;
+            padding-bottom: 50px;
+            border-left: 3px solid var(--border);
         }
+        
+        .timeline-item:last-child { border-left-color: transparent; }
 
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: -9px;
-            top: 5px;
-            width: 16px;
-            height: 16px;
+            left: -11px;
+            top: 0px;
+            width: 19px;
+            height: 19px;
             border-radius: 50%;
             background: var(--primary);
-            border: 4px solid white;
+            border: 5px solid var(--background);
+            box-shadow: 0 0 0 3px var(--primary-light);
         }
+        
+        .timeline-role { font-size: 1.4rem; font-weight: 700; margin-bottom: 5px; }
+        .timeline-meta { color: var(--primary); font-weight: 600; font-size: 0.95rem; margin-bottom: 20px; display: inline-block; background: rgba(13, 148, 136, 0.1); padding: 4px 12px; border-radius: 20px; }
 
         /* EDUCATION & CONTACT */
         .info-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
         }
 
         .info-card {
-            background: white;
-            padding: 25px;
-            border-radius: 16px;
+            background: var(--surface);
+            padding: 35px;
+            border-radius: 24px;
             border: 1px solid var(--border);
+            text-align: center;
+            transition: 0.3s;
         }
+        .info-card:hover { border-color: var(--primary-light); transform: translateY(-5px); box-shadow: var(--shadow); }
+        .info-card i { font-size: 2rem; color: var(--primary); margin-bottom: 20px; }
+        .info-card p strong { color: var(--text-heading); font-size: 1.1rem; display: block; margin-bottom: 10px; }
 
         footer {
             text-align: center;
-            padding: 60px;
-            background: #0f172a;
+            padding: 80px 20px;
+            background: #042f2e; /* Very dark teal footer */
             color: #94a3b8;
         }
 
         /* ANIMATIONS */
-        .fade-in { opacity: 0; transform: translateY(30px); transition: 0.8s ease-out; }
+        .fade-in { opacity: 0; transform: translateY(40px); transition: 1s cubic-bezier(0.22, 1, 0.36, 1); }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
 
         @media (max-width: 768px) {
-            header h1 { font-size: 2.5rem; }
-            nav { gap: 1rem; font-size: 0.8rem; flex-wrap: wrap; }
+            header h1 { font-size: 3rem; }
+            nav { width: 95%; padding: 1rem; gap: 0.8rem; font-size: 0.85rem; flex-wrap: wrap; top: 10px;}
+            .section-title { font-size: 2.2rem; }
+            .profile-img { width: 160px; height: 160px; }
         }
     </style>
 </head>
@@ -254,10 +299,10 @@
 
 <header>
     <div class="profile-container">
-        <img src="image_2.png" alt="Khushboo Patel Professional Portfolio" class="profile-img">
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400&h=400" alt="Khushboo Patel Professional Profile" class="profile-img">
     </div>
     <h1>Khushboo Patel</h1>
-    <p>Cyber Security • Data Analyst • IT Governance</p>
+    <p><i class="fas fa-shield-halved"></i> Cyber Security • Data Analyst • IT Governance</p>
 </header>
 
 <nav>
@@ -269,12 +314,12 @@
 </nav>
 
 <section id="about" class="fade-in">
-    <h2 class="section-title">Profile Summary</h2>
+    <h2 class="section-title">Executive Profile</h2>
     <p>Cyber Security and IT professional with a solid foundation in cyber risk management, governance, compliance, and data-driven operations, supported by postgraduate studies in Information and Communication Technology (ICT).</p>
     <p>Experienced in designing and implementing organisation-wide Cyber Security Policies at NVMS, strengthening IT/OT governance, improving system integrity, and reducing operational risks. Skilled in conducting cyber and operational risk assessments, process optimisation, and automation using Python, SQL, and Power BI.</p>
     <p>Bringing several years of experience in calibration, laboratory operations, and technical service delivery, with a strong background in data management systems, equipment workflows, quality control, and regulatory compliance. Adept at integrating calibration processes with digital systems, enhancing accuracy, traceability, and reporting efficiency.</p>
     
-    <div style="text-align: center; margin-top: 40px;">
+    <div style="text-align: center; margin-top: 50px;">
         <a href="Khushboo_Patel_Resume.pdf" class="resume-btn" download>
             <i class="fas fa-file-pdf"></i> Download Official Resume
         </a>
@@ -282,7 +327,7 @@
 </section>
 
 <section id="skills" class="fade-in">
-    <h2 class="section-title">Core Expertise</h2>
+    <h2 class="section-title">Core Competencies</h2>
     <div class="skills-container">
         <div class="skill-card"><i class="fas fa-shield-halved"></i> <span>Cyber Risk Management (ISO 27001, NIST, COBIT, ISA/IEC)</span></div>
         <div class="skill-card"><i class="fas fa-network-wired"></i> <span>IT & OT Security & Governance</span></div>
@@ -294,12 +339,12 @@
 </section>
 
 <section id="projects" class="fade-in">
-    <h2 class="section-title">Technical Projects</h2>
+    <h2 class="section-title">Featured Projects</h2>
 
-    <div class="project-card project-energy">
+    <div class="project-card">
         <div class="project-header">
             <div>
-                <h3 style="color: var(--primary);">Energy Consumption Prediction (ML)</h3>
+                <h3>Energy Consumption Prediction (ML)</h3>
                 <small>Machine Learning • Risk Modelling</small>
             </div>
             <i class="fas fa-chevron-down"></i>
@@ -310,10 +355,10 @@
         </div>
     </div>
 
-    <div class="project-card project-db">
+    <div class="project-card">
         <div class="project-header">
             <div>
-                <h3 style="color: var(--primary);">Smart Learning Platform – MongoDB</h3>
+                <h3>Smart Learning Platform – MongoDB</h3>
                 <small>NoSQL • Data Architecture</small>
             </div>
             <i class="fas fa-chevron-down"></i>
@@ -324,10 +369,10 @@
         </div>
     </div>
 
-    <div class="project-card project-ai">
+    <div class="project-card">
         <div class="project-header">
             <div>
-                <h3 style="color: var(--primary);">AI Symposium Research</h3>
+                <h3>AI Symposium Research</h3>
                 <small>AI Ethics • Governance</small>
             </div>
             <i class="fas fa-chevron-down"></i>
@@ -340,45 +385,48 @@
 </section>
 
 <section id="experience" class="fade-in">
-    <h2 class="section-title">Professional Experience</h2>
+    <h2 class="section-title">Professional Journey</h2>
 
     <div class="timeline-item">
-        <h3 style="margin-bottom: 5px;">Calibration Technician – NVMS</h3>
-        <p style="color: var(--primary); font-weight: 600; font-size: 0.9rem; margin-bottom: 15px;">Current | WA</p>
-        <ul style="padding-left: 20px;">
+        <div class="timeline-role">Calibration Technician – NVMS</div>
+        <div class="timeline-meta">Current | WA</div>
+        <ul>
             <li>Designed and implemented organisation-wide Cyber Security policies governing IT and OT systems.</li>
             <li>Conducted cyber and operational risk assessments across instrumentation and data flows.</li>
-            <li>Developed Python automation and Power BI dashboards for compliance reporting.</li>
-            <li>Managed SAP-based inventory, quoting, and technical service delivery.</li>
+            <li>Developed Python automation and Power BI dashboards for compliance reporting and visibility.</li>
+            <li>Collaborated with engineers and management to embed cybersecurity best practices into operational processes.</li>
         </ul>
     </div>
 
     <div class="timeline-item">
-        <h3>Team Leader – Materials Technology Centre</h3>
-        <p style="color: var(--primary); font-weight: 600; font-size: 0.9rem;">Sep 2021 – Dec 2023</p>
-        <p>Led materials testing operations under Australian Standards and NATA accreditation, ensuring consistent quality and regulatory compliance.</p>
+        <div class="timeline-role">Team Leader – Materials Technology Centre</div>
+        <div class="timeline-meta">Sep 2021 – Dec 2023</div>
+        <p>Led materials testing operations under Australian Standards and NATA accreditation, ensuring consistent quality and regulatory compliance. Managed audits, trend analysis, and continuous improvement initiatives.</p>
     </div>
 
     <div class="timeline-item">
-        <h3>Laboratory Technician – Midland Brick</h3>
-        <p style="color: var(--primary); font-weight: 600; font-size: 0.9rem;">Jan 2020 – Sep 2021</p>
+        <div class="timeline-role">Laboratory Technician – Midland Brick</div>
+        <div class="timeline-meta">Jan 2020 – Sep 2021</div>
         <p>Conducted compliance testing for environmental and operational risks, maintaining secure digital records aligned with requirements.</p>
     </div>
 </section>
 
 <section id="education" class="fade-in">
-    <h2 class="section-title">Education</h2>
+    <h2 class="section-title">Education & Credentials</h2>
     <div class="info-grid">
         <div class="info-card">
+            <i class="fas fa-graduation-cap"></i>
             <p><strong>Master of ICT</strong></p>
             <p>University of the Sunshine Coast</p>
-            <small>Expected 2025 • Cyber Security Major</small>
+            <small style="color: var(--primary); font-weight: 600;">Expected 2025 • Cyber Security Major</small>
         </div>
         <div class="info-card">
+            <i class="fas fa-certificate"></i>
             <p><strong>Diploma of IT</strong></p>
             <p>Equinim College</p>
         </div>
         <div class="info-card">
+            <i class="fas fa-flask"></i>
             <p><strong>BSc & MSc</strong></p>
             <p>Biotechnology</p>
         </div>
@@ -386,30 +434,34 @@
 </section>
 
 <section id="contact" class="fade-in">
-    <h2 class="section-title">Let's Connect</h2>
-    <div class="info-grid" style="text-align: center;">
-        <div class="info-card"><i class="fas fa-location-dot" style="color:var(--primary)"></i><br>Aveley, WA 6069</div>
-        <div class="info-card"><i class="fas fa-envelope" style="color:var(--primary)"></i><br>p.kh2601@gmail.com</div>
-        <div class="info-card"><i class="fas fa-phone" style="color:var(--primary)"></i><br>+61 415 225 295</div>
-        <div class="info-card"><i class="fab fa-linkedin" style="color:var(--primary)"></i><br>Khushboo Patel</div>
+    <h2 class="section-title">Connect</h2>
+    <div class="info-grid">
+        <div class="info-card"><i class="fas fa-location-dot"></i><p><strong>Location</strong>Aveley, WA 6069</p></div>
+        <div class="info-card"><i class="fas fa-envelope"></i><p><strong>Email</strong>p.kh2601@gmail.com</p></div>
+        <div class="info-card"><i class="fas fa-phone"></i><p><strong>Phone</strong>+61 415 225 295</p></div>
+        <div class="info-card"><i class="fab fa-linkedin"></i><p><strong>LinkedIn</strong>Khushboo Patel</p></div>
     </div>
 </section>
 
 <footer>
     <p>© 2026 Khushboo Patel — Cyber Security & Data Portfolio</p>
-    <p style="font-size: 0.8rem; margin-top: 10px;">Built for Career Excellence</p>
+    <p style="font-size: 0.9rem; margin-top: 15px; opacity: 0.7;">Designed for Career Excellence</p>
 </footer>
 
 <script>
-    // Smooth Reveal
+    // Smooth Reveal Animation
     const observer = new IntersectionObserver(entries => {
         entries.forEach(e => { if(e.isIntersecting) e.target.classList.add("visible") });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
     document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
 
-    // Expandable Projects
+    // Expandable Projects Logic
     document.querySelectorAll(".project-card").forEach(card => {
         card.addEventListener("click", () => {
+            // Close other open cards (optional, removes clutter)
+            document.querySelectorAll(".project-card.active").forEach(c => {
+                if (c !== card) c.classList.remove("active");
+            });
             card.classList.toggle("active");
         });
     });
