@@ -20,14 +20,14 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
-            body {
-            font-family: 'Inter', sans-serif;
-            background-color: #020617; /* Dark base for particles */
-            display: flex;
-            height: 100vh; 
-            overflow: hidden;
-            color: var(--text-body);
-        }
+               body {
+        font-family: 'Inter', sans-serif;
+        background-color: #020617;
+        display: flex;
+        min-height: 100vh;   /* ✅ allow growth */
+        overflow-y: auto;   /* ✅ normal scrolling */
+        color: var(--text-body);
+    }
 
         /* ADD THIS NEW BLOCK */
         #particles-js {
@@ -42,7 +42,7 @@
 
             header {
             width: 500px;
-            height: 100vh;
+            min-height: 100vh;
             padding: 60px 50px 60px 90px;
             display: flex;
             flex-direction: column;
